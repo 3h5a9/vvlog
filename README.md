@@ -1,5 +1,11 @@
 # Vblog
 
+  > Pages
+    - Home
+    - About
+    - Contact
+    - Blog
+
   > Posts
 
   > Users
