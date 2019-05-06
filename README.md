@@ -22,8 +22,8 @@
 
 # Required gems
 
-  ~~> Bootstrap 4.3.1 == Done~~
+  > ~~Bootstrap 4.3.1 == Done~~
 
-  ~~> Jquery Rails    == Done~~
+  > ~~Jquery Rails    == Done~~
   
   > Devise
