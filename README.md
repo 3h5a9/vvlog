@@ -2,9 +2,9 @@
 
   > Pages
   
-    - Home
-    - About
-    - Contact
+    - ~~Home~~
+    - ~~About~~
+    - ~~Contact~~
     - Blog
 
   > Posts
