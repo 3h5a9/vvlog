@@ -1,0 +1,20 @@
+<div class="row my-5">
+  <div class="col-md-8 offset-md-2">
+    <h1>All Posts</h1>
+    <% @posts.each do |post| %>
+      <div class="card mb-3">
+        <div class="card-body">
+          <h5 class="post-title"><%= link_to post.title, post_path(post) %></h5>
+          <p class="text-justify">
+            <%= truncate(post.content, length: 150) %>
+          </p>
+        </div>
+        <div class="card-footer">
+          <%= link_to  "Full Article", post_path(post), class: 'btn btn-sm btn-success' %>
+          <%= link_to "Edit", edit_post_path(post), class: 'btn btn-sm btn-warning' %>
+          <%= link_to  "Delete", post_path(post), method: :delete, data: {Confirm: "Are you sure?"}, class: 'btn btn-sm btn-danger' %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

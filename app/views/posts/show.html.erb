@@ -1,0 +1,9 @@
+<div class="row my-5">
+  <div class="col-md-8 offset-md-2">
+    <h2><%= @post.title %></h2>
+    <%= simple_format(@post.content, class: 'text-justify') %>
+    <%= link_to  "Back to blog", posts_path, class: 'btn btn-sm btn-info' %>
+    <%= link_to "Edit", edit_post_path(@post), class: 'btn btn-sm btn-warning' %>
+    <%= link_to  "Delete", post_path(@post), method: :delete, data: {Confirm: "Are you sure?"}, class: 'btn btn-sm btn-danger' %>
+  </div>
+</div>
