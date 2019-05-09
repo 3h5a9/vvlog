@@ -1,9 +1,21 @@
 <div class="row my-5">
   <div class="col-md-8 offset-md-2">
-    <h2><%= @post.title %></h2>
-    <%= simple_format(@post.content, class: 'text-justify') %>
-    <%= link_to  "Back to blog", posts_path, class: 'btn btn-sm btn-info' %>
-    <%= link_to "Edit", edit_post_path(@post), class: 'btn btn-sm btn-warning' %>
-    <%= link_to  "Delete", post_path(@post), method: :delete, data: {Confirm: "Are you sure?"}, class: 'btn btn-sm btn-danger' %>
+    <div class="card">
+      <div class="card-header mb-2">
+        <h2 class="post-title mb-0"><%= @post.title %></h2>
+        <span class="text-muted sm-text">
+          Published By: Sm Ehsan - 
+          <%= time_ago_in_words(@post.created_at) %> Ago
+        </span>
+      </div>
+      <div class="card-body">
+        <%= simple_format(@post.content, class: 'text-justify') %>
+      </div>
+      <div class="card-footer mt-2">
+        <%= link_to  "Back to blog", posts_path, class: 'btn btn-sm btn-info' %>
+        <%= link_to "Edit", edit_post_path(@post), class: 'btn btn-sm btn-warning' %>
+        <%= link_to  "Delete", post_path(@post), method: :delete, data: {Confirm: "Are you sure?"}, class: 'btn btn-sm btn-danger' %>
+      </div>
+    </div>
   </div>
 </div>
