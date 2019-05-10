@@ -34,3 +34,10 @@
   > ~~Jquery Rails    == Done~~
   
   > Devise
+
+
+
+
+  #Category
+    - A post has many category
+    - A category has many posts

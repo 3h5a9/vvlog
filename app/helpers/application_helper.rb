@@ -9,4 +9,11 @@ module ApplicationHelper
     end
   end
 
+  def backtotop
+    link_to "", class: 'bttop btn btn-sm btn-danger' do
+      fa_icon('hand-pointer')
+    end
+  end
+
+
 end
