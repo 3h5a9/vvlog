@@ -5,7 +5,7 @@
     - ~~Home~~
     - ~~About~~
     - ~~Contact~~
-    - Blog
+    - ~~Blog~~
 
   > Posts
 
@@ -15,11 +15,11 @@
   
   > Full authentication
   
-  > Category
+  > ~~Category = Done~~
   
-  > Post has many category
+  > ~~Post has many category == Done ~~
   
-  > Category has many posts
+  > ~~Category has many posts == Done~~
   
   > Comments
   
@@ -34,10 +34,3 @@
   > ~~Jquery Rails    == Done~~
   
   > Devise
-
-
-
-
-  #Category
-    - A post has many category
-    - A category has many posts
