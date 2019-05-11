@@ -12,7 +12,9 @@
           <span class="text-muted sm-text">
             Published On: 
             <% @post.categories.each do |pcat| %>
-              <span class="badge badge-secondary"><%= pcat.name %></span>
+              <span class="badge badge-secondary">
+                <%= link_to pcat.name, category_path(pcat), class: 'text-white' %>
+              </span>
             <% end %>
           </span>
         <% end %>

@@ -22,3 +22,19 @@
     </div>
   </div>
 </div>
+
+<div class="row my-5">
+  <div class="col-md-8 offset-md-2">
+    <% @posts.each do |p| %>
+      <div class="card mb-3">
+        <div class="card-body">
+          <h5><%= link_to p.title, post_path(p) %></h5>
+          <span class="text-muted sm-text">
+            Published at <%= fa_icon("clock") %>
+            <%= p.created_at.strftime("%m-%e-%y %H:%M") %>
+          </span>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

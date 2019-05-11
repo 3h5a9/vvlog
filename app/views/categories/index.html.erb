@@ -4,7 +4,12 @@
       <% @categories.each do |category| %>
         <div class="card mb-3" style="min-width: 16rem;">
           <div class="card-header">
-            <h4><%= category.name %></h4>
+            <h4>
+              <%= category.name %>
+              <span class="badge badge-info float-right">
+                <%= category.posts.count %>
+              </span>
+            </h4>
           </div>
           <div class="card-body">
             <%= category.description %>
