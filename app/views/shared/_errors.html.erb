@@ -1,12 +1,12 @@
-<% if @post.errors.any? %>
+<% if obj.errors.any? %>
   <div class="alert alert-warning alert-dismissible fade show" role="alert">
     <h5>
       Following
-      <strong><%= pluralize(@post.errors.count, "Error") %></strong>
-      Preventing this post to be <%= @post.new_record? ? :Published : "Updated" %>
+      <strong><%= pluralize(obj.errors.count, "Error") %></strong>
+      Preventing this post to be <%= obj.new_record? ? :Published : "Updated" %>
     </h5>
     <ul>
-      <% @post.errors.full_messages.each do |msg| %>
+      <% obj.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
       <% end %>
     </ul>

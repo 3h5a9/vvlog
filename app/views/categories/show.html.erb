@@ -1,0 +1,24 @@
+<div class="row my-5">
+  <div class="col-md-8 offset-md-2">
+    <div class="card">
+      <div class="card-header">
+        <h3><%= @category.name %></h3>
+      </div>
+      <div class="card-body">
+        <%= @category.description %>
+      </div>
+      <div class="card-footer d-flex justify-content-between">
+        <span class="sm-text text-muted">
+          Published at: 
+          <%= @category.created_at.strftime("%A, %d %b %Y %l:%M %p") %>
+        </span>
+        <span>
+          <%= link_to  "Edit", edit_category_path(@category), class: 'btn btn-sm btn-outline-primary' %>
+          <%= link_to  "Delete", category_path(@category), method: :delete, data: {Confirm: "Are you sure?"}, class: 'btn btn-sm btn-outline-danger' %>
+          <%= link_to "Cancle", categories_path, class: 'btn btn-sm btn-outline-warning' %>
+        </span>
+        
+      </div>
+    </div>
+  </div>
+</div>

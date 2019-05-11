@@ -5,5 +5,6 @@ Rails.application.routes.draw do
   get 'contact', to: 'pages#contact'
 
   resources :posts
+  resources :categories
 
 end
