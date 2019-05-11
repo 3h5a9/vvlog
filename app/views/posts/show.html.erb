@@ -7,6 +7,15 @@
           Published By: Sm Ehsan - 
           <%= time_ago_in_words(@post.created_at) %> Ago
         </span>
+        <span>~~~</span>
+        <% unless @post.categories.blank? %>
+          <span class="text-muted sm-text">
+            Published On: 
+            <% @post.categories.each do |pcat| %>
+              <span class="badge badge-secondary"><%= pcat.name %></span>
+            <% end %>
+          </span>
+        <% end %>
       </div>
       <div class="card-body">
         <%= simple_format(@post.content, class: 'text-justify') %>
