@@ -1,11 +1,11 @@
 # Vblog
 
-  > Pages
-  
-    - ~~Home~~
-    - ~~About~~
-    - ~~Contact~~
-    - ~~Blog~~
+**Pages**
+  > Home
+  > About
+  > Contact
+  > Blog
+
 
   > Posts
 
@@ -34,3 +34,10 @@
   > ~~Jquery Rails    == Done~~
   
   > Devise
+
+
+
+###Comment System
+  - Post has many comments
+  - comments has many comments
+  - user has many comments
