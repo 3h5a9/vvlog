@@ -17,7 +17,7 @@
   
   > ~~Category = Done~~
   
-  > ~~Post has many category == Done ~~
+  > ~~Post has many category == Done~~
   
   > ~~Category has many posts == Done~~
   
