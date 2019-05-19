@@ -10,6 +10,7 @@
               Published By: Sm Ehsan - 
               <%= time_ago_in_words(post.created_at) %> Ago
             </span>
+            <span>Totel Comment: <%= post.comments.count %></span>
           </div>
           <p class="text-justify">
             <%= truncate(post.content, length: 150) %>

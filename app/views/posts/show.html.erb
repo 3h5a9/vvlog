@@ -28,6 +28,24 @@
         <%= link_to  "Delete", post_path(@post), method: :delete, data: {Confirm: "Are you sure?"}, class: 'btn btn-sm btn-danger' %>
       </div>
     </div>
+
+    <div class="card mt-5 bg-gray text-muted">
+      <div class="card-body">
+        <%= render  "comments/form" %>
+      </div>
+    </div>
+
+
+    <% @post.comments.each do |comment| %>
+      <div class="card mt-5 bg-primary text-white">
+        <div class="card-header">
+          <%= comment.name %>
+        </div>
+        <div class="card-body">
+            <%= comment.body %>
+        </div>
+      </div>
+    <% end %>
   </div>
 </div>
 <%= backtotop %>
