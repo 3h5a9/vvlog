@@ -35,15 +35,37 @@
       </div>
     </div>
 
-
     <% @post.comments.each do |comment| %>
-      <div class="card mt-5 bg-primary text-white">
-        <div class="card-header">
-          <%= comment.name %>
-        </div>
-        <div class="card-body">
+      <div id="comment_<%= comment.id %>" class="collapse show">
+        <div class="card mt-5 bg-white">
+          <div class="card-header">
+            <%= comment.name %>
+          </div>
+          <div class="card-body">
             <%= comment.body %>
+          </div>
+          <div class="card-footer d-flex">
+            <button type="button" class="btn btn-sm btn-warning w-50 mr-2" data-toggle="collapse" data-target="#comment_<%= comment.id %>">
+              Edit
+            </button>
+            <%= link_to  "Delete", [@post, comment], method: :delete, class: 'btn btn-sm btn-danger w-50 ml-2' %>
+          </div>
         </div>
+      </div>
+      <%# Form goes here %>
+      <div id="comment_<%= comment.id %>" class="collapse">
+        <%= form_for([@post, comment]) do |f| %>
+          <div class="form-group">
+            <%= f.text_field :name, class: 'form-control' %>
+          </div>
+          <div class="form-group">
+            <%= f.text_area :body, class: 'form-control' %>
+          </div>
+          <%= f.submit(comment.new_record? ? "Publish" : "update", class: 'btn btn-sm btn-success') %>
+          <button type="button" class="btn btn-sm btn-warning w-50 mr-2" data-toggle="collapse" data-target="#comment_<%= comment.id %>">
+            Cancel
+          </button>
+        <% end %>
       </div>
     <% end %>
   </div>

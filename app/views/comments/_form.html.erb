@@ -5,5 +5,8 @@
   <div class="form-group">
     <%= f.text_area :body, class: 'form-control' %>
   </div>
-  <%= f.submit :Submit, class: 'btn btn-sm btn-success' %>
+  <%= f.submit(@comment.new_record? ? "Publish" : "update", class: 'btn btn-sm btn-success') %>
 <% end %>
+
+<%# here %>
+<%# Let's also open the posts controller and comments controller and start in the post show.html.erb %>
